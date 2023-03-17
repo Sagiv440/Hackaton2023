@@ -983,7 +983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "????\u05EA\u05D5\u05E9\u05E2\u05DC \u05DD\u05D9\u05DE\u05E1"
+  m_text: "???\u05DD\u05D9\u05DE\u05E1 \u05EA\u05D5\u05E9\u05E2\u05DC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
