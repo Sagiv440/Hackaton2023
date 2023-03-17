@@ -142,14 +142,10 @@ public class GameManager : MonoBehaviour
             int index = 0;
             if (Cards.Length > 1)
             {
-                index = Random.Range(0, Cards.Length - 1);
+                index = Random.Range(0, Cards.Length);
                 if (last_card == -1)
                 {
                     last_card = index;
-                }
-                while (index == last_card)
-                {
-                    index = Random.Range(0, Cards.Length - 1);
                 }
             }
             load_Card(Cards[index]);
