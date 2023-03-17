@@ -88,6 +88,8 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - Locale
+    - Locale-he
+    - Preload
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 35c352604586a2b4fa7c95d75e2217d1, type: 2}

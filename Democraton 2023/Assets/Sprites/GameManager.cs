@@ -8,11 +8,12 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] int Money = 50;
     [SerializeField] int Military = 50;
-    [SerializeField] int Religen = 50;
+    [SerializeField] int Religion = 50;
     [SerializeField] int People = 50;
 
     [Header("Main Text")]
     [SerializeField] TextMeshProUGUI tmp_Main;
+    [SerializeField] TextMeshProUGUI tmp_Name;
 
     [Header("Choises")]
     [SerializeField] TextMeshProUGUI tmp_Left;
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
     [Header("Parameters")]
     [SerializeField] TextMeshProUGUI tmp_Money;
     [SerializeField] TextMeshProUGUI tmp_Military;
-    [SerializeField] TextMeshProUGUI tmp_Religen;
+    [SerializeField] TextMeshProUGUI tmp_Religion;
     [SerializeField] TextMeshProUGUI tmp_People;
 
     [Header("Parameters")]
@@ -32,6 +33,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float Rotation_offset;
     [SerializeField] private float Return_Time;
     [SerializeField] private AnimationCurve MotionCurve;
+
+    [Header("Cards")]
+    [SerializeField] List<GameObject> Cards;
 
     private Timer returnTimer;
 
@@ -44,6 +48,9 @@ public class GameManager : MonoBehaviour
 
     private float right_alpha_last;
     private float left_alpha_last;
+
+    private Parameters left_choise;
+    private Parameters right_choise;
 
 
     // Start is called before the first frame update
@@ -67,7 +74,7 @@ public class GameManager : MonoBehaviour
     {
         Money   = 50;
         Military  = 50;
-        Religen     = 50;
+        Religion= 50;
         People   = 50;
 
         Card_startPosition = Card.transform.position;
@@ -80,8 +87,8 @@ public class GameManager : MonoBehaviour
         if (Money >= 100) return END_GAME.FULL_MONNY;
         if (Military <= 0) return END_GAME.WEAK_MILTARY;
         if (Military >= 100) return END_GAME.STRONG_MILTARY;
-        if (Religen <= 0) return END_GAME.WEAK_RELIGION;
-        if (Religen >= 100) return END_GAME.STRONG_RELIGION;
+        if (Religion <= 0) return END_GAME.WEAK_RELIGION;
+        if (Religion >= 100) return END_GAME.STRONG_RELIGION;
         if (People <= 0) return END_GAME.WEAK_RELIGION;
         if (People >= 100) return END_GAME.STRONG_RELIGION;
         return END_GAME.STILL_IN_POWER;
@@ -90,18 +97,24 @@ public class GameManager : MonoBehaviour
     private void SelectChoise()
     {
         Vector3 direction = lastMousePos - firstMousePos;
-        float size = Vector3.Magnitude(direction);
-
-        Debug.Log("Drag distance: " + size + " Vector: " + direction);
 
         if(direction.x > DragDis)
         {
             Debug.Log("Select Right Choise");
+            if (right_choise != null)
+                Add_Effect(right_choise);
         }
         if (direction.x < -DragDis)
         {
             Debug.Log("Select Left Choise");
+            if (left_choise != null)
+                Add_Effect(left_choise);
         }
+        Reload_Next_Card();
+    }
+
+    private void Reload_Next_Card()
+    {
 
     }
 
@@ -158,8 +171,16 @@ public class GameManager : MonoBehaviour
     {
         Money += Effect.Money;
         Military += Effect.Miltary;
-        Religen += Effect.Religen;
+        Religion += Effect.Religen;
         People += Effect.People;
+    }
+    
+    void PramUpdate()
+    {
+        tmp_Money.text = "Money: " + Money;
+        tmp_Military.text = "Military: " + Military;
+        tmp_Religion.text = "Religion: " + Religion;
+        tmp_People.text = "People: " + People;
     }
 
     void Awake()
@@ -187,5 +208,6 @@ public class GameManager : MonoBehaviour
         checkMouse();
         SelectEffect();
         TimerUpdate();
+        PramUpdate();
     }
 }
