@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
@@ -28,14 +29,13 @@ public class GameManager : MonoBehaviour
 
     [Header("Parameters")]
     [SerializeField] private float DragDis = 2;
-
     [SerializeField] private Vector3 Drag_offset;
     [SerializeField] private float Rotation_offset;
     [SerializeField] private float Return_Time;
     [SerializeField] private AnimationCurve MotionCurve;
 
     [Header("Cards")]
-    [SerializeField] List<GameObject> Cards;
+    [SerializeField] GameObject[] Cards;
 
     private Timer returnTimer;
 
@@ -45,12 +45,15 @@ public class GameManager : MonoBehaviour
     private Vector3 Card_EndPosition;
     private float Card_startRotation;
     private float Card_EndRotation;
+    private RawImage card_rawImage;
 
     private float right_alpha_last;
     private float left_alpha_last;
 
     private Parameters left_choise;
     private Parameters right_choise;
+
+    private int last_card = -1;
 
 
     // Start is called before the first frame update
@@ -59,6 +62,8 @@ public class GameManager : MonoBehaviour
     {
         tmp_Right.alpha = 0;
         tmp_Left.alpha = 0;
+        Cards = GameObject.FindGameObjectsWithTag(Tags.CARD);
+        card_rawImage = Card.GetComponent<RawImage>();
     }
 
     void initTimer()
@@ -76,6 +81,10 @@ public class GameManager : MonoBehaviour
         Military  = 50;
         Religion= 50;
         People   = 50;
+
+
+        left_choise = new Parameters();
+        right_choise = new Parameters();
 
         Card_startPosition = Card.transform.position;
         Card_startRotation = 0.0f;
@@ -113,9 +122,38 @@ public class GameManager : MonoBehaviour
         Reload_Next_Card();
     }
 
+    private void load_Card(GameObject Card)
+    {
+        CardController con = Card.GetComponent<CardController>();
+        right_choise.SetParam(con.Right_Effect_Money, con.Right_Effect_Miltary, con.Right_Effect_Religen, con.Right_Effect_People);
+        left_choise.SetParam(con.Left_Effect_Money, con.Left_Effect_Miltary, con.Left_Effect_Religen, con.Left_Effect_People);
+
+        card_rawImage.texture = con.Character;
+        tmp_Main.text = con.Main_Text;
+        tmp_Name.text = con.Charicter_Name;
+        tmp_Left.text = con.Left_Choise;
+        tmp_Right.text = con.Right_Choise;
+    }
+
     private void Reload_Next_Card()
     {
-
+        if (Cards != null)
+        {
+            int index = 0;
+            if (Cards.Length > 1)
+            {
+                index = Random.Range(0, Cards.Length - 1);
+                if (last_card == -1)
+                {
+                    last_card = index;
+                }
+                while (index == last_card)
+                {
+                    index = Random.Range(0, Cards.Length - 1);
+                }
+            }
+            load_Card(Cards[index]);
+        }
     }
 
     private void SelectEffect()
@@ -189,7 +227,12 @@ public class GameManager : MonoBehaviour
         initCard();
         initTimer();
     }
-    
+
+    private void Start()
+    {
+        Reload_Next_Card();
+    }
+
     public void firstClick()
     {
         firstMousePos = Input.mousePosition;

@@ -19,10 +19,10 @@ public class END_GAME
 
 public class Parameters
 {
-    public int Money;
-    public int Miltary;
-    public int Religen;
-    public int People;
+    public int Money = 0;
+    public int Miltary = 0;
+    public int Religen = 0;
+    public int People = 0;
 
     public void SetParam(int M, int Mi, int R, int P)
     {
