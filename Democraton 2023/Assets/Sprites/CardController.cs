@@ -10,6 +10,7 @@ public class CardController : MonoBehaviour
     public string Main_Text;
     public string Left_Choise;
     public string Right_Choise;
+    public string Charicter_Name;
 
     public int Left_Effect_Money = 0;
     public int Left_Effect_Miltary = 0;
