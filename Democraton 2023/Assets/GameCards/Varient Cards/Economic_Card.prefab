@@ -7,9 +7,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Main_Text
+      value: There are protestors outside the office! what should we do with them?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Left_Choise
+      value: Send the military!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Right_Choise
+      value: Let them be, it is their democratic right
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Charicter_Name
+      value: Morit Miskal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Left_Effect_People
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Right_Effect_Money
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Left_Effect_Miltary
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Left_Effect_Religen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Right_Effect_People
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Right_Effect_Religen
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_Name
-      value: GameCard
+      value: Economic_Card
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_RootOrder

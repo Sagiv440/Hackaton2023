@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 31088
+  controlID: 41838
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 31089
+  controlID: 41749
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 31090
+  controlID: 41750
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,9 +228,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 145dfeff
-      m_LastClickedID: -107244
-      m_ExpandedIDs: 265dfeff2e5dfeff6466feff827bfeff9a80feff5282feff388dfeffc4dafeff10e0feffb4e4feffaae9feff12eefeff88fefeff4e03ffff9a08ffff880cfffffa11ffff1e16ffff341bffff0824ffff9c47ffff7653ffffde5dffff665fffff6c60ffff5468ffff8078ffff0884ffff0e90ffffd694ffffea98ffff88baffff4cc7ffff60cefffface8ffff16ecffff94edffff08f4ffffeaf8ffffe0faffff929900009c990000e8990000709a0000189b00002ca4000036a40000b4a400003ca50000e0ab0000eaab0000f6b2000000b3000012b500002cb500003eba000048ba000088bc0000a2bc0000b8c50000c2c5000072cb00007ccb000086cb0000d4d10000ded10000fed5000018d6000032db00003cdb00009edd0000eae00000f4e00000a2e60000ace600002cec000036ec000020f200002af20000aaf70000b4f70000da0f0100e40f0100641501006e150100201601003a1601002a1d0100341d01007c1f0100b01f01001a2001002020010076200100a8200100b2200100b8200100d0200100
+      m_SelectedIDs: 0022fdff
+      m_LastClickedID: -187904
+      m_ExpandedIDs: 9adefdff1ae2fdffe0e3fdffdce5fdff265dfeff2e5dfeff6466feff827bfeff9a80feff5282feff388dfeffc4dafeff10e0feffb4e4feffaae9feff12eefeff88fefeff4e03ffff9a08ffff880cfffffa11ffff1e16ffff341bffff0824ffff9c47ffff7653ffffde5dffff665fffff6c60ffff5468ffff8078ffff0884ffff0e90ffffd694ffffea98ffff88baffff4cc7ffff60cefffface8ffff16ecffff94edffff08f4ffffeaf8ffffe0faffff929900009c990000e8990000709a0000189b00002ca4000036a40000b4a400003ca50000e0ab0000eaab0000f6b2000000b3000012b500002cb500003eba000048ba000088bc0000a2bc0000b8c50000c2c5000072cb00007ccb000086cb0000d4d10000ded10000fed5000018d6000032db00003cdb00009edd0000eae00000f4e00000a2e60000ace600002cec000036ec000020f200002af20000aaf70000b4f70000da0f0100e40f0100641501006e150100201601003a1601002a1d0100341d01007c1f0100961f0100b01f01001a2001002020010076200100a8200100b2200100b8200100d02001005c420100ac420100f24201000e43010068430100a6430100b0430100c8430100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -273,8 +273,8 @@ MonoBehaviour:
     y: 0
     width: 801.99994
     height: 486.66666
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -561,9 +561,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.62506, y: 2.976706, z: 257.91376}
+    m_Target: {x: -0.6856593, y: -0.7634944, z: 200.49905}
     speed: 2
-    m_Value: {x: -3.62506, y: 2.976706, z: 257.91376}
+    m_Value: {x: -0.6856593, y: -0.7634944, z: 200.49905}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -614,9 +614,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.0966935
+    m_Target: 3.8623133
     speed: 2
-    m_Value: 5.0966935
+    m_Value: 3.8623133
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -711,22 +711,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Card_Slices
+    - Assets/GameCards/Varient Cards
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites/Card_Slices
+  - Assets/GameCards/Varient Cards
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Georg\Git\Hackaton2023\Democraton 2023
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a0930000
-    m_LastClickedID: 37792
-    m_ExpandedIDs: 000000000e7500000c7e00008a81000000ca9a3bffffff7f
+    m_SelectedIDs: 06d00000
+    m_LastClickedID: 53254
+    m_ExpandedIDs: 000000000e7500000c7e000006d0000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -742,7 +742,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 9}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -779,8 +779,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 145dfeff
-    m_LastClickedInstanceID: -107244
+    m_SelectedInstanceIDs: 0022fdff
+    m_LastClickedInstanceID: -187904
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -870,7 +870,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -131142
+  m_LastSelectedObjectID: 82586
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -933,7 +933,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -107244
+  m_LastInspectedObjectInstanceID: -187904
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

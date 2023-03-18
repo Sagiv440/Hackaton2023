@@ -13,31 +13,35 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: 63b203c5caedd1047ad26fd3085b3c75, type: 3}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Main_Text
-      value: You escaped the country after livint the country in civil war
+      value: The army askes for more budget to increase the country's security
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Choise
-      value: 
+      value: Of course, the army will get more money, we are under constant threat
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Choise
-      value: 
+      value: No, we will be fine.
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Charicter_Name
       value: 'Game Over '
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Left_Effect_Money
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Effect_People
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Effect_Money
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Effect_Miltary
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Effect_Religen
@@ -45,7 +49,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Effect_People
-      value: 0
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Right_Effect_Miltary
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Effect_Religen
@@ -53,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_Name
-      value: PeopleEndingCard Variant
+      value: Protest_Lose_Card
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_TagString

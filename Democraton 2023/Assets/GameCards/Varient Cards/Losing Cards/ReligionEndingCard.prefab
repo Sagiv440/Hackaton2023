@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2205859417885829313
+--- !u!1001 &7162120643707845988
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,33 +8,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
-      propertyPath: Back
-      value: 
-      objectReference: {fileID: 2800000, guid: 176bbbe228d88744caac05f7c5bd42b2, type: 3}
-    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Character
       value: 
-      objectReference: {fileID: 2800000, guid: f0d37d6cd2b530a4ea46ccc02537edbd, type: 3}
+      objectReference: {fileID: 2800000, guid: 1a74bd810782fca45a5d7ffa42fbc928, type: 3}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Main_Text
-      value: The Ministry of Religions wishes to impose a chestity law on all women
-        and enforce them to dress modestly
+      value: Religious fanatics took over the country, you lost.
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Choise
-      value: God bless! all women should cover as much of themselves as they can
+      value: Try Again
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Choise
-      value: We will not control peoples bodies.
+      value: Back to Menu
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Charicter_Name
-      value: Baruch Tzadik
+      value: Game Over
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Effect_People
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Effect_Money
@@ -45,12 +40,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Left_Effect_Religen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Effect_People
-      value: 10
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Right_Effect_Religen
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_Name
-      value: Chestity_Card
+      value: ReligionEndingCard
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_TagString
+      value: Ending_Card
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_RootOrder
