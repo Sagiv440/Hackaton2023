@@ -8,21 +8,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Character
+      value: 
+      objectReference: {fileID: 2800000, guid: 57f3a61ea3339d74db20c4fc5439beff, type: 3}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Main_Text
-      value: Violence against women and minorities is increasing, we are demanding
-        a budget to support for victims
+      value: Violence against women and minorities is increasing, we should do something
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Choise
-      value: They will cope alone
+      value: It is not a priority
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Choise
-      value: Build shelter for battered women
+      value: We should build more shelters for women
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Charicter_Name
-      value: Miri Cohen
+      value: Inav Miraeli
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Effect_Money
@@ -54,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_Name
-      value: women card Variant
+      value: women card Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_RootOrder
