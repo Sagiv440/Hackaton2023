@@ -33,6 +33,14 @@ public class Parameters
     }
 }
 
+public enum CARD_SWIPE
+{
+    NONE = 0,
+    LEFT = 1,
+    RIGHT = 2
+}
+
+
 public enum GAME_STATE
 {
     START = 0,

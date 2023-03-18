@@ -25,11 +25,6 @@ public class CardController : MonoBehaviour
     public int Right_Effect_People = 0;
 
 
-    public void LoadCard()
-    {
-        //load The Card Data to the UI
-    }
-
     void Awake()
     {
         Manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
