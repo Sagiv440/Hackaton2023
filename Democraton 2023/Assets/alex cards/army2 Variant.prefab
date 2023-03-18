@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6841944125047612357
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 928723636855990194, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: Character
+      value: 
+      objectReference: {fileID: 2800000, guid: ce7466f8d3f952f4a83f8612ecf7ca2d, type: 3}
+    - target: {fileID: 928723636855990194, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: Main_Text
+      value: ' The Ministry of Defense wants to outlaw "uncoordinated demonstrations"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990194, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: Left_Choise
+      value: Demonstrations are a basic right
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990194, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: Right_Choise
+      value: Demonstrations are for the enemies of the state
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990194, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: Charicter_Name
+      value: Slomo Negev
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990194, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: Left_Effect_Money
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990194, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: Left_Effect_People
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990194, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: Right_Effect_Money
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990194, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: Left_Effect_Miltary
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990194, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: Right_Effect_People
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990194, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: Right_Effect_Miltary
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990195, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: m_Name
+      value: army2
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990221, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990221, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6106151
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990221, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3261907
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990221, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.08687567
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990221, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990221, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990221, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990221, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990221, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990221, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 928723636855990221, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3acbe4a1c3be2764992dfdc9fe55b149, type: 3}

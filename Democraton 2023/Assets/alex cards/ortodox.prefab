@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6400286941797366834
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Character
+      value: 
+      objectReference: {fileID: 2800000, guid: f0d37d6cd2b530a4ea46ccc02537edbd, type: 3}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Main_Text
+      value: "\u2022 The ultra-Orthodox parties demand that airports cease operations
+        on Saturdays and holidays"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Left_Choise
+      value: People want to fly whenever it's convenient for them
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Right_Choise
+      value: Religion is more important than progress
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Charicter_Name
+      value: Shlomi Katz
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Left_Effect_Money
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Left_Effect_People
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Right_Effect_Money
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Left_Effect_Miltary
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Left_Effect_Religen
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Right_Effect_People
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Right_Effect_Religen
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_Name
+      value: ortodox
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6106151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3261907
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.08687567
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e940bde96966a4e48996031b99baac32, type: 3}
