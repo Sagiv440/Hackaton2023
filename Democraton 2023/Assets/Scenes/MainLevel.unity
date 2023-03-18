@@ -842,6 +842,7 @@ MonoBehaviour:
   Drag_offset: {x: 2, y: 0, z: 0}
   Rotation_offset: 20
   Return_Time: 0.8
+  Swipe_Time: 0
   MotionCurve:
     serializedVersion: 2
     m_Curve:
