@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
         left_choise = new Parameters();
         right_choise = new Parameters();
 
-        Card_startPosition = Card.transform.position;
+        Card_startPosition = Card.transform.localPosition;
         Card_startRotation = 0.0f;
     }
 
@@ -162,14 +162,14 @@ public class GameManager : MonoBehaviour
             {
                 tmp_Right.alpha = 0;
                 tmp_Left.alpha = lerper;
-                Card.transform.position = Vector3.Lerp(Card_startPosition, Card_startPosition - Drag_offset, lerper);
+                Card.transform.localPosition = Vector3.Lerp(Card_startPosition, Card_startPosition - Drag_offset, lerper);
                 Card.transform.rotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Lerp(Card_startRotation, Card_startRotation + Rotation_offset, lerper));
             }
             else
             {
                 tmp_Left.alpha = 0;
                 tmp_Right.alpha = lerper;
-                Card.transform.position = Vector3.Lerp(Card_startPosition, Card_startPosition + Drag_offset, lerper);
+                Card.transform.localPosition = Vector3.Lerp(Card_startPosition, Card_startPosition + Drag_offset, lerper);
                 Card.transform.rotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Lerp(Card_startRotation, Card_startRotation - Rotation_offset, lerper));
             }
 
