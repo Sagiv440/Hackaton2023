@@ -34,12 +34,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float Return_Time;
     [SerializeField] private float Swipe_Time;
     [SerializeField] private AnimationCurve MotionCurve;
-
+    [SerializeField] private Texture CardBack;
+    private Texture card_Front;
     [Header("Cards")]
     [SerializeField] GameObject[] Cards;
 
     private Timer returnTimer;
     private Timer swipeTimer;
+
+    private bool animating = true;
 
     private bool Clicked = false;
     private Vector3 firstMousePos , lastMousePos;
@@ -55,6 +58,7 @@ public class GameManager : MonoBehaviour
     private Parameters left_choise;
     private Parameters right_choise;
 
+    
     private int last_card = -1;
 
 
@@ -116,19 +120,37 @@ public class GameManager : MonoBehaviour
             Debug.Log("Select Right Choise");
             if (right_choise != null)
                 Add_Effect(right_choise);
-                swipeTimer.ActivateTimer();
+            Card.GetComponent<Card_logic>().Start_Right_select();
+            tmp_Right.alpha = 0.0f;
+            animating = true;
         }
         else if (direction.x < -DragDis)
         {
             Debug.Log("Select Left Choise");
             if (left_choise != null)
                 Add_Effect(left_choise);
-                swipeTimer.ActivateTimer();
+            tmp_Left.alpha = 0.0f;
+            Card.GetComponent<Card_logic>().Start_Left_select();
+            animating = true;
         }
         else
         {
             returnTimer.ActivateTimer();
         }
+    }
+
+    public void End_Animation()
+    {
+        animating = false;
+    }
+
+    public void Flip_to_front()
+    {
+        card_rawImage.texture = card_Front;
+    }
+    public void Flip_to_back()
+    {
+        card_rawImage.texture = CardBack;
     }
 
     private void load_Card(GameObject Card)
@@ -137,7 +159,8 @@ public class GameManager : MonoBehaviour
         right_choise.SetParam(con.Right_Effect_Money, con.Right_Effect_Miltary, con.Right_Effect_Religen, con.Right_Effect_People);
         left_choise.SetParam(con.Left_Effect_Money, con.Left_Effect_Miltary, con.Left_Effect_Religen, con.Left_Effect_People);
 
-        card_rawImage.texture = con.Character;
+        card_Front = con.Character;
+        card_rawImage.texture = CardBack;
         tmp_Main.text = con.Main_Text;
         tmp_Name.text = con.Charicter_Name;
         tmp_Left.text = con.Left_Choise;
@@ -209,9 +232,10 @@ public class GameManager : MonoBehaviour
                 Card.transform.localPosition = Vector3.Lerp(Card_EndPosition, Card_startPosition, MotionCurve.Evaluate(lerper));
                 Card.transform.rotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Lerp(Card_EndRotation, Card_startRotation, MotionCurve.Evaluate(lerper)));
             }
-            if (swipeTimer.IsTimerActive() == true)
+            /*if (swipeTimer.IsTimerActive() == true)
             {
                 Card.SetActive(false);
+                
             }
             if (swipeTimer.IsTimerEnded())
             {
@@ -219,7 +243,7 @@ public class GameManager : MonoBehaviour
                 Card.transform.localPosition = Card_startPosition;
                 Card.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
                 Reload_Next_Card();
-            }
+            }*/
 
         }
     }
@@ -254,8 +278,11 @@ public class GameManager : MonoBehaviour
 
     public void firstClick()
     {
-        firstMousePos = Input.mousePosition;
-        Clicked = true;
+        if (animating == false)
+        {
+            firstMousePos = Input.mousePosition;
+            Clicked = true;
+        }
     }
 
     // Update is called once per frame
