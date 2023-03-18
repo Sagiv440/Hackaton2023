@@ -187,7 +187,7 @@ public class GameManager : MonoBehaviour
                 returnTimer.SetTimerTime(Return_Time);
                 returnTimer.ActivateTimer();
                 lastMousePos = Input.mousePosition;
-                Card_EndPosition = Card.transform.position;
+                Card_EndPosition = Card.transform.localPosition;
                 Card_EndRotation = Card.transform.rotation.eulerAngles.z > 180 ? Card.transform.rotation.eulerAngles.z - 360 : Card.transform.rotation.eulerAngles.z;
                 left_alpha_last = tmp_Left.alpha > 1.0f ? 1.0f: tmp_Left.alpha;
                 right_alpha_last = tmp_Right.alpha > 1.0f ? 1.0f : tmp_Right.alpha;
@@ -196,7 +196,7 @@ public class GameManager : MonoBehaviour
             float lerper = returnTimer.GetCurrentTime() / Return_Time;
             tmp_Left.alpha = Mathf.Lerp(left_alpha_last, 0.0f, MotionCurve.Evaluate(lerper));
             tmp_Right.alpha = Mathf.Lerp(right_alpha_last, 0.0f, MotionCurve.Evaluate(lerper));
-            Card.transform.position = Vector3.Lerp(Card_EndPosition, Card_startPosition, MotionCurve.Evaluate(lerper));
+            Card.transform.localPosition = Vector3.Lerp(Card_EndPosition, Card_startPosition, MotionCurve.Evaluate(lerper));
             Card.transform.rotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Lerp(Card_EndRotation, Card_startRotation, MotionCurve.Evaluate(lerper)));
         }
     }
