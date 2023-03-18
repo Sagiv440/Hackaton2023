@@ -22,10 +22,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject Card;
 
     [Header("Parameters")]
-    [SerializeField] TextMeshProUGUI tmp_Money;
-    [SerializeField] TextMeshProUGUI tmp_Military;
-    [SerializeField] TextMeshProUGUI tmp_Religion;
-    [SerializeField] TextMeshProUGUI tmp_People;
+    [SerializeField] Slider tmp_Money;
+    [SerializeField] Slider tmp_Military;
+    [SerializeField] Slider tmp_Religion;
+    [SerializeField] Slider tmp_People;
 
     [Header("Parameters")]
     [SerializeField] private float DragDis = 2;
@@ -211,10 +211,10 @@ public class GameManager : MonoBehaviour
     
     void PramUpdate()
     {
-        tmp_Money.text = "Money: " + Money;
-        tmp_Military.text = "Military: " + Military;
-        tmp_Religion.text = "Religion: " + Religion;
-        tmp_People.text = "People: " + People;
+        tmp_Money.value = Money / 100.0f;
+        tmp_Military.value = Military / 100.0f;
+        tmp_Religion.value = Religion / 100.0f;
+        tmp_People.value = People / 100.0f;
     }
 
     void Awake()
