@@ -31,6 +31,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] Slider tmp_Religion;
     [SerializeField] Slider tmp_People;
 
+    [SerializeField] GameObject Indicator_Money;
+    [SerializeField] GameObject Indicator_Military;
+    [SerializeField] GameObject Indicator_Religion;
+    [SerializeField] GameObject Indicator_People;
+
     [Header("Parameters")]
     [SerializeField] private float DragDis = 2;
     [SerializeField] private Vector3 Drag_offset;
@@ -39,6 +44,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float Swipe_Time;
     [SerializeField] private AnimationCurve MotionCurve;
     [SerializeField] private Texture CardBack;
+
+    [SerializeField] private float Indicator_Small_Scale;
+    [SerializeField] private float Indicator_large_Scale;
     private Texture card_Front;
     [Header("Cards")]
     [SerializeField] GameObject[] Cards;
@@ -72,6 +80,32 @@ public class GameManager : MonoBehaviour
     {
         Counter = 0;
         MonthCounter.text = "" + Counter;
+    }
+
+    void SetIndecators(bool state)
+    {
+        Indicator_Money.SetActive(state);
+        Indicator_Military.SetActive(state);
+        Indicator_Religion.SetActive(state);
+        Indicator_People.SetActive(state);
+    }
+
+    void SetByParameters(Parameters pm)
+    {
+        if (pm.Money != 0) Indicator_Money.SetActive(true); else Indicator_Money.SetActive(false);
+        if (pm.Miltary != 0) Indicator_Military.SetActive(true); else Indicator_Military.SetActive(false);
+        if (pm.Religen != 0) Indicator_Religion.SetActive(true); else Indicator_Religion.SetActive(false);
+        if (pm.People != 0) Indicator_People.SetActive(true); else Indicator_People.SetActive(false); 
+
+        float Mscale = Mathf.Lerp(Indicator_Small_Scale, Indicator_large_Scale, pm.Money / 50.0f);
+        float MIscale = Mathf.Lerp(Indicator_Small_Scale, Indicator_large_Scale, pm.Miltary / 50.0f);
+        float Rscale = Mathf.Lerp(Indicator_Small_Scale, Indicator_large_Scale, pm.Religen / 50.0f);
+        float Pscale = Mathf.Lerp(Indicator_Small_Scale, Indicator_large_Scale, pm.People / 50.0f);
+
+        Indicator_Money.transform.localScale = new Vector3(Mscale, Mscale, Mscale);
+        Indicator_Military.transform.localScale = new Vector3(MIscale, MIscale, MIscale);
+        Indicator_Religion.transform.localScale = new Vector3(Rscale, Rscale, Rscale);
+        Indicator_People.transform.localScale = new Vector3(Pscale, Pscale, Pscale);
     }
 
     void initCard()
@@ -207,6 +241,8 @@ public class GameManager : MonoBehaviour
                 tmp_Left.alpha = lerper;
                 Card.transform.localPosition = Vector3.Lerp(Card_startPosition, Card_startPosition - Drag_offset, lerper);
                 Card.transform.rotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Lerp(Card_startRotation, Card_startRotation + Rotation_offset, lerper));
+
+                SetByParameters(left_choise);
             }
             else
             {
@@ -214,8 +250,14 @@ public class GameManager : MonoBehaviour
                 tmp_Right.alpha = lerper;
                 Card.transform.localPosition = Vector3.Lerp(Card_startPosition, Card_startPosition + Drag_offset, lerper);
                 Card.transform.rotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Lerp(Card_startRotation, Card_startRotation - Rotation_offset, lerper));
+
+                SetByParameters(right_choise);
             }
 
+        }
+        else
+        {
+            SetIndecators(false);
         }
     }
 
@@ -282,6 +324,7 @@ public class GameManager : MonoBehaviour
         initCard();
         initTimer();
         initCounter();
+        SetIndecators(false);
     }
 
     private void Start()
