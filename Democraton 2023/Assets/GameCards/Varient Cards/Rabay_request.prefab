@@ -10,26 +10,31 @@ PrefabInstance:
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Character
       value: 
-      objectReference: {fileID: 2800000, guid: 63b203c5caedd1047ad26fd3085b3c75, type: 3}
+      objectReference: {fileID: 2800000, guid: d03df22e0c32e454ca7e65831f9e04e2, type: 3}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Main_Text
-      value: You escaped the country after livint the country in civil war
+      value: The Orthodox are bulking roads and make nose. we fear valences will
+        break
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Choise
-      value: 
+      value: Send the Military Police to Arrest them.
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Choise
-      value: 
+      value: Tell the Police to keep their distance
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Charicter_Name
       value: 'Game Over '
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Left_Effect_Money
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Effect_People
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Effect_Money
@@ -37,27 +42,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Effect_Miltary
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Effect_Religen
-      value: 0
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Effect_People
-      value: 0
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Right_Effect_Miltary
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Effect_Religen
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_Name
-      value: PeopleEndingCard Variant
+      value: Rabay_request
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_TagString
-      value: Ending_Card
+      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967167, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_RootOrder
