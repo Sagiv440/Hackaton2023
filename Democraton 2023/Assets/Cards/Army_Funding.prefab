@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Character
       value: 
-      objectReference: {fileID: 2800000, guid: 63b203c5caedd1047ad26fd3085b3c75, type: 3}
+      objectReference: {fileID: 2800000, guid: ce7466f8d3f952f4a83f8612ecf7ca2d, type: 3}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Main_Text
       value: The army askes for more budget to increase the country's security
@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_Name
-      value: Protest_Lose_Card
+      value: Army_Funding
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_TagString
