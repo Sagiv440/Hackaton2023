@@ -32,12 +32,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Vector3 Drag_offset;
     [SerializeField] private float Rotation_offset;
     [SerializeField] private float Return_Time;
+    [SerializeField] private float Swipe_Time;
     [SerializeField] private AnimationCurve MotionCurve;
 
     [Header("Cards")]
     [SerializeField] GameObject[] Cards;
 
     private Timer returnTimer;
+    private Timer swipeTimer;
 
     private bool Clicked = false;
     private Vector3 firstMousePos , lastMousePos;
@@ -69,10 +71,12 @@ public class GameManager : MonoBehaviour
     void initTimer()
     {
         returnTimer = new Timer(Return_Time);
+        swipeTimer = new Timer(Swipe_Time);
     }
     void TimerUpdate()
     {
         if(returnTimer.IsTimerActive() == true) returnTimer.SubtractTimerByValue(Time.deltaTime);
+        if (swipeTimer.IsTimerActive() == true) swipeTimer.SubtractTimerByValue(Time.deltaTime);
     }
 
     private void setParams()
@@ -112,14 +116,19 @@ public class GameManager : MonoBehaviour
             Debug.Log("Select Right Choise");
             if (right_choise != null)
                 Add_Effect(right_choise);
+                swipeTimer.ActivateTimer();
         }
-        if (direction.x < -DragDis)
+        else if (direction.x < -DragDis)
         {
             Debug.Log("Select Left Choise");
             if (left_choise != null)
                 Add_Effect(left_choise);
+                swipeTimer.ActivateTimer();
         }
-        Reload_Next_Card();
+        else
+        {
+            returnTimer.ActivateTimer();
+        }
     }
 
     private void load_Card(GameObject Card)
@@ -185,7 +194,6 @@ public class GameManager : MonoBehaviour
             {
                 Clicked = false;
                 returnTimer.SetTimerTime(Return_Time);
-                returnTimer.ActivateTimer();
                 lastMousePos = Input.mousePosition;
                 Card_EndPosition = Card.transform.localPosition;
                 Card_EndRotation = Card.transform.rotation.eulerAngles.z > 180 ? Card.transform.rotation.eulerAngles.z - 360 : Card.transform.rotation.eulerAngles.z;
@@ -193,11 +201,26 @@ public class GameManager : MonoBehaviour
                 right_alpha_last = tmp_Right.alpha > 1.0f ? 1.0f : tmp_Right.alpha;
                 SelectChoise();
             }
-            float lerper = returnTimer.GetCurrentTime() / Return_Time;
-            tmp_Left.alpha = Mathf.Lerp(left_alpha_last, 0.0f, MotionCurve.Evaluate(lerper));
-            tmp_Right.alpha = Mathf.Lerp(right_alpha_last, 0.0f, MotionCurve.Evaluate(lerper));
-            Card.transform.localPosition = Vector3.Lerp(Card_EndPosition, Card_startPosition, MotionCurve.Evaluate(lerper));
-            Card.transform.rotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Lerp(Card_EndRotation, Card_startRotation, MotionCurve.Evaluate(lerper)));
+            if (returnTimer.IsTimerActive() == true)
+            {
+                float lerper = returnTimer.GetCurrentTime() / Return_Time;
+                tmp_Left.alpha = Mathf.Lerp(left_alpha_last, 0.0f, MotionCurve.Evaluate(lerper));
+                tmp_Right.alpha = Mathf.Lerp(right_alpha_last, 0.0f, MotionCurve.Evaluate(lerper));
+                Card.transform.localPosition = Vector3.Lerp(Card_EndPosition, Card_startPosition, MotionCurve.Evaluate(lerper));
+                Card.transform.rotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Lerp(Card_EndRotation, Card_startRotation, MotionCurve.Evaluate(lerper)));
+            }
+            if (swipeTimer.IsTimerActive() == true)
+            {
+                Card.SetActive(false);
+            }
+            if (swipeTimer.IsTimerEnded())
+            {
+                Card.SetActive(true);
+                Card.transform.localPosition = Card_startPosition;
+                Card.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+                Reload_Next_Card();
+            }
+
         }
     }
 
