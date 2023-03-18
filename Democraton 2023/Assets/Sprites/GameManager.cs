@@ -42,8 +42,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float Rotation_offset;
     [SerializeField] private float Return_Time;
     [SerializeField] private float Swipe_Time;
+    [SerializeField] private float EndGame_Time;
     [SerializeField] private AnimationCurve MotionCurve;
     [SerializeField] private Texture CardBack;
+
+    [Header("End Game Card")]
+    [SerializeField] GameObject MoneyEndingCard;
+    [SerializeField] GameObject ReligionEndingCard;
+    [SerializeField] GameObject ArmyEndingCard;
 
     [SerializeField] private float Indicator_Small_Scale;
     [SerializeField] private float Indicator_large_Scale;
@@ -53,6 +59,9 @@ public class GameManager : MonoBehaviour
 
     private Timer returnTimer;
     private Timer swipeTimer;
+    private Timer EndGameTimer;
+
+    private GAME_STATE Gstate = GAME_STATE.PLAY;
 
     private bool animating = true;
 
@@ -120,11 +129,13 @@ public class GameManager : MonoBehaviour
     {
         returnTimer = new Timer(Return_Time);
         swipeTimer = new Timer(Swipe_Time);
+        EndGameTimer = new Timer(EndGame_Time);
     }
     void TimerUpdate()
     {
         if(returnTimer.IsTimerActive() == true) returnTimer.SubtractTimerByValue(Time.deltaTime);
         if (swipeTimer.IsTimerActive() == true) swipeTimer.SubtractTimerByValue(Time.deltaTime);
+        if (EndGameTimer.IsTimerActive() == true) EndGameTimer.SubtractTimerByValue(Time.deltaTime);
     }
 
     private void setParams()
@@ -213,7 +224,7 @@ public class GameManager : MonoBehaviour
 
     public void Reload_Next_Card()
     {
-        if (Cards != null)
+        if (Cards != null && Gstate == GAME_STATE.PLAY)
         {
             int index = 0;
             if (Cards.Length > 1)
@@ -231,7 +242,7 @@ public class GameManager : MonoBehaviour
 
     private void SelectEffect()
     {
-        if(Clicked == true)
+        if(Clicked == true && Gstate == GAME_STATE.PLAY)
         {
             Vector3 distance = Input.mousePosition - firstMousePos;
             float lerper = Mathf.Abs(distance.x) / DragDis;
@@ -344,14 +355,43 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(IsGameOver() != END_GAME.STILL_IN_POWER)
+        if(IsGameOver() != END_GAME.STILL_IN_POWER && Gstate == GAME_STATE.PLAY)
+        { 
+            Gstate = GAME_STATE.END;
+            EndGameTimer.SetTimerTime(EndGame_Time);
+            if (IsGameOver() == END_GAME.STRONG_RELIGION || IsGameOver() == END_GAME.WEAK_RELIGION)
+            {
+                load_Card(ReligionEndingCard);
+                EndGameTimer.ActivateTimer();
+            }
+            if (IsGameOver() == END_GAME.STRONG_MILTARY || IsGameOver() == END_GAME.WEAK_MILTARY)
+            {
+                load_Card(ArmyEndingCard);
+                EndGameTimer.ActivateTimer();
+            }
+            if (IsGameOver() == END_GAME.FULL_MONNY || IsGameOver() == END_GAME.NO_MONEY)
+            {
+                load_Card(MoneyEndingCard);
+                EndGameTimer.ActivateTimer();
+            }
+            if (IsGameOver() == END_GAME.STRONG_SUPPORT || IsGameOver() == END_GAME.WEAK_SUPPROT)
+            {
+                load_Card(MoneyEndingCard);
+                EndGameTimer.ActivateTimer();
+            }
+
+        }
+        if (EndGameTimer.IsTimerEnded())
         {
-            Debug.Log("Game Over: " + IsGameOver());
-            Application.Quit();
+            SceneManager.LoadScene("MainMenu");
         }
 
-        checkMouse();
-        SelectEffect();
+
+        if (Gstate == GAME_STATE.PLAY)
+        {
+            checkMouse();
+            SelectEffect();
+        }
         TimerUpdate();
         PramUpdate();
     }
