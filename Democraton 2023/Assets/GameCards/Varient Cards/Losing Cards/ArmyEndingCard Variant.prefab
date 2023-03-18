@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7162120643707845988
+--- !u!1001 &5909634621242832848
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,25 +8,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
+      propertyPath: Back
+      value: 
+      objectReference: {fileID: 2800000, guid: 176bbbe228d88744caac05f7c5bd42b2, type: 3}
+    - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Character
       value: 
-      objectReference: {fileID: 2800000, guid: 1a74bd810782fca45a5d7ffa42fbc928, type: 3}
+      objectReference: {fileID: 2800000, guid: d8d6fa24abec7ca4c915d676ef7f782a, type: 3}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Main_Text
-      value: "\u05D4\u05DB\u05E4\u05D4 \u05D4\u05DC\u05E9\u05DE\u05DE \u05D4\u05DB\u05DC\u05D4
-        \u05EA\u05E0\u05D9\u05D3\u05DE\u05DC"
+      value: Your incompetence caused a military coup, you are now under arrest
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Choise
-      value: "\u05D1\u05D5\u05E9 \u05EA\u05D5\u05E1\u05E0\u05DC"
+      value: Try Again
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Right_Choise
-      value: "\u05D9\u05E9\u05D0\u05E8 \u05DA\u05E1\u05DE\u05DC \u05E8\u05D5\u05D6\u05D7\u05DC"
+      value: Back to Menu
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Charicter_Name
-      value: "\u05E7\u05D7\u05E9\u05DE\u05D4 \u05DD\u05D9\u05D9\u05EA\u05E1\u05D4"
+      value: Game Over
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967040, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: Left_Effect_People
@@ -54,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_Name
-      value: ReligionEndingCard
+      value: ArmyEndingCard Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6066663339304967041, guid: e940bde96966a4e48996031b99baac32, type: 3}
       propertyPath: m_TagString
