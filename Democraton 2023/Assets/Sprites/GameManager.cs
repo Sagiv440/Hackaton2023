@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] int Religion = 50;
     [SerializeField] int People = 50;
 
+    [Header("Months Counter")]
+    [SerializeField] private int Counter;
+    [SerializeField] TextMeshProUGUI MonthCounter;
+
     [Header("Main Text")]
     [SerializeField] TextMeshProUGUI tmp_Main;
     [SerializeField] TextMeshProUGUI tmp_Name;
@@ -63,6 +67,12 @@ public class GameManager : MonoBehaviour
 
 
     // Start is called before the first frame update
+
+    void initCounter()
+    {
+        Counter = 0;
+        MonthCounter.text = "" + Counter;
+    }
 
     void initCard()
     {
@@ -167,7 +177,7 @@ public class GameManager : MonoBehaviour
         tmp_Right.text = con.Right_Choise;
     }
 
-    private void Reload_Next_Card()
+    public void Reload_Next_Card()
     {
         if (Cards != null)
         {
@@ -182,6 +192,7 @@ public class GameManager : MonoBehaviour
             }
             load_Card(Cards[index]);
         }
+        Counter++;
     }
 
     private void SelectEffect()
@@ -262,6 +273,7 @@ public class GameManager : MonoBehaviour
         tmp_Military.value = Military / 100.0f;
         tmp_Religion.value = Religion / 100.0f;
         tmp_People.value = People / 100.0f;
+        MonthCounter.text = "" + Counter;
     }
 
     void Awake()
@@ -269,6 +281,7 @@ public class GameManager : MonoBehaviour
         setParams();
         initCard();
         initTimer();
+        initCounter();
     }
 
     private void Start()

@@ -9,7 +9,7 @@ public class Card_logic : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(Manager != null)
+        if (Manager != null)
         {
             Manager.firstClick();
             Debug.Log("Player Clicked On the Card;");
@@ -31,6 +31,11 @@ public class Card_logic : MonoBehaviour
     public void flip_to_back()
     {
         Manager.Flip_to_back();
+    }
+
+    public void load_next()
+    {
+        Manager.Reload_Next_Card();
     }
 
     public void Start_Left_select()
