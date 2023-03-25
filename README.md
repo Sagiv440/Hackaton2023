@@ -2,7 +2,9 @@ Game Of Thrones (Hackaton2023)
 ======
 
 This Game was created in **Hackaton2023**.
-Link to play in a browser: [**Game Of Thrones**](https://sagiv440.itch.io/game-of-throunse)
+Link to play the game in a browser: [**Game Of Thrones**](https://sagiv440.itch.io/game-of-throunse).
+
+You can also download the executable from the release tab [**here**](https://github.com/Sagiv440/Hackaton2023/releases/tag/GameTag)
 
 # Description
 A political card Game where you decided the fate of your political career and the Rest of the nation. 
