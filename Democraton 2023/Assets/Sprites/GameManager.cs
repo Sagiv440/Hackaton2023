@@ -55,7 +55,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float Indicator_large_Scale;
     private Texture card_Front;
     [Header("Cards")]
-    [SerializeField] GameObject[] Cards;
+    [SerializeField] TextAsset Card_Data;
+    [SerializeField] CardList Card_Set = new CardList();
+    [SerializeField] Texture[] images;
 
     private Timer returnTimer;
     private Timer swipeTimer;
@@ -78,9 +80,9 @@ public class GameManager : MonoBehaviour
 
     private Parameters left_choise;
     private Parameters right_choise;
-
     
     private int last_card = -1;
+
 
 
     // Start is called before the first frame update
@@ -121,8 +123,8 @@ public class GameManager : MonoBehaviour
     {
         tmp_Right.alpha = 0;
         tmp_Left.alpha = 0;
-        Cards = GameObject.FindGameObjectsWithTag(Tags.CARD);
         card_rawImage = Card.GetComponent<RawImage>();
+        Card_Set = JsonUtility.FromJson<CardList>(Card_Data.text);
     }
 
     void initTimer()
@@ -208,34 +210,34 @@ public class GameManager : MonoBehaviour
         card_rawImage.texture = CardBack;
     }
 
-    private void load_Card(GameObject Card)
+    private void load_Card(Card Card)
     {
-        CardController con = Card.GetComponent<CardController>();
-        right_choise.SetParam(con.Right_Effect_Money, con.Right_Effect_Miltary, con.Right_Effect_Religen, con.Right_Effect_People);
-        left_choise.SetParam(con.Left_Effect_Money, con.Left_Effect_Miltary, con.Left_Effect_Religen, con.Left_Effect_People);
+        right_choise.SetParam(Card.R_Effect_Monny, Card.R_Effect_Military, Card.R_Effect_Religen, Card.R_Effect_People);
+        left_choise.SetParam(Card.L_Effect_Monny, Card.L_Effect_Military, Card.L_Effect_Religen, Card.L_Effect_People);
 
-        card_Front = con.Character;
+        card_Front = images[Card.Image];
         card_rawImage.texture = CardBack;
-        tmp_Main.text = con.Main_Text;
-        tmp_Name.text = con.Charicter_Name;
-        tmp_Left.text = con.Left_Choise;
-        tmp_Right.text = con.Right_Choise;
+        tmp_Main.text = Card.Main_text;
+        tmp_Name.text = Card.name;
+        tmp_Left.text = Card.Left_Choise;
+        tmp_Right.text = Card.Right_Choise;
     }
+
 
     public void Reload_Next_Card()
     {
-        if (Cards != null && Gstate == GAME_STATE.PLAY)
+        if (Card_Set.Cards != null && Gstate == GAME_STATE.PLAY)
         {
             int index = 0;
-            if (Cards.Length > 1)
+            if (Card_Set.Cards.Length > 1)
             {
-                index = Random.Range(0, Cards.Length);
+                index = Random.Range(0, Card_Set.Cards.Length);
                 if (last_card == -1)
                 {
                     last_card = index;
                 }
             }
-            load_Card(Cards[index]);
+            load_Card(Card_Set.Cards[index]);
         }
         Counter++;
     }
@@ -296,19 +298,6 @@ public class GameManager : MonoBehaviour
                 Card.transform.localPosition = Vector3.Lerp(Card_EndPosition, Card_startPosition, MotionCurve.Evaluate(lerper));
                 Card.transform.rotation = Quaternion.Euler(0.0f, 0.0f, Mathf.Lerp(Card_EndRotation, Card_startRotation, MotionCurve.Evaluate(lerper)));
             }
-            /*if (swipeTimer.IsTimerActive() == true)
-            {
-                Card.SetActive(false);
-                
-            }
-            if (swipeTimer.IsTimerEnded())
-            {
-                Card.SetActive(true);
-                Card.transform.localPosition = Card_startPosition;
-                Card.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
-                Reload_Next_Card();
-            }*/
-
         }
     }
 
@@ -361,22 +350,22 @@ public class GameManager : MonoBehaviour
             EndGameTimer.SetTimerTime(EndGame_Time);
             if (IsGameOver() == END_GAME.STRONG_RELIGION || IsGameOver() == END_GAME.WEAK_RELIGION)
             {
-                load_Card(ReligionEndingCard);
+                load_Card(Card_Set.EndCards[0]);
                 EndGameTimer.ActivateTimer();
             }
             if (IsGameOver() == END_GAME.STRONG_MILTARY || IsGameOver() == END_GAME.WEAK_MILTARY)
             {
-                load_Card(ArmyEndingCard);
+                load_Card(Card_Set.EndCards[1]);
                 EndGameTimer.ActivateTimer();
             }
             if (IsGameOver() == END_GAME.FULL_MONNY || IsGameOver() == END_GAME.NO_MONEY)
             {
-                load_Card(MoneyEndingCard);
+                load_Card(Card_Set.EndCards[2]);
                 EndGameTimer.ActivateTimer();
             }
             if (IsGameOver() == END_GAME.STRONG_SUPPORT || IsGameOver() == END_GAME.WEAK_SUPPROT)
             {
-                load_Card(MoneyEndingCard);
+                load_Card(Card_Set.EndCards[2]);
                 EndGameTimer.ActivateTimer();
             }
 

@@ -1,0 +1,179 @@
+{
+	"Cards" :
+	[
+		{
+			"name": "Mar Mary",
+			"Main_text": "The army askes for more budget to increase the country's security",
+			"Left_Choise": "Of course, the army will get more money, we are under constant threat",
+			"Right_Choise": "No, we will be fine.",
+
+			"Image": 4,
+
+			"L_Effect_Monny": -25,
+			"L_Effect_Military": 0,
+			"L_Effect_Religen": 0,
+			"L_Effect_People": 5,
+
+			"R_Effect_Monny": 10,
+			"R_Effect_Military": -5,
+			"R_Effect_Religen": 0,
+			"R_Effect_People": -5
+		},
+
+		{
+			"name": "Morit Miskal",
+			"Main_text": "There are protestors outside the office! what should we do with them?",
+			"Left_Choise": "Send the military!",
+			"Right_Choise": "Let them be, it is their democratic right",
+
+			"Image": 1,
+
+			"L_Effect_Monny": 0,
+			"L_Effect_Military": 10,
+			"L_Effect_Religen": 0,
+			"L_Effect_People": -20,
+
+			"R_Effect_Monny": -10,
+			"R_Effect_Military": 0,
+			"R_Effect_Religen": 0,
+			"R_Effect_People": 10
+		},
+
+		{
+			"name": "Sadman Botman",
+			"Main_text": "To be even more democratic, we have to pass a legal reform which will allow us to pass any laws we wish, independently of the court",
+			"Left_Choise": "Yes, this is the will of the people! A true democracy",
+			"Right_Choise": "But this reform is not democratic at all....",
+
+			"Image": 2,
+
+			"L_Effect_Monny": -35,
+			"L_Effect_Military": 10,
+			"L_Effect_Religen": 10,
+			"L_Effect_People": -25,
+
+			"R_Effect_Monny": -10,
+			"R_Effect_Military": 0,
+			"R_Effect_Religen": -15,
+			"R_Effect_People": 25
+		},
+
+		{
+			"name": "Alon Boy",
+			"Main_text": "The Orthodox are blocking roads, we fear that violance will breake",
+			"Left_Choise": "Send the Police",
+			"Right_Choise": "Tell the Police to keep their distance",
+
+			"Image": 7,
+
+			"L_Effect_Monny": -4,
+			"L_Effect_Military": 3,
+			"L_Effect_Religen": -4,
+			"L_Effect_People": -20,
+
+			"R_Effect_Monny": -10,
+			"R_Effect_Military": 0,
+			"R_Effect_Religen": 0,
+			"R_Effect_People": 10
+		},
+		
+		{
+			"name": "Inav Miraeli",
+			"Main_text": "Violence against women and minorities is increasing, we should do something",
+			"Left_Choise": "It is not a priority",
+			"Right_Choise": "We should build more shelters for women",
+
+			"Image": 3,
+
+			"L_Effect_Monny": 20,
+			"L_Effect_Military": 0,
+			"L_Effect_Religen": 0,
+			"L_Effect_People": -5,
+
+			"R_Effect_Monny": -15,
+			"R_Effect_Military": 0,
+			"R_Effect_Religen": 0,
+			"R_Effect_People": 15
+		},
+
+		{
+			"name": "Shlomi Katz",
+			"Main_text": "The Orthodox parties demand that airports cease operations on Saturdays and holidays",
+			"Left_Choise": "People want to fly whenever it's convenient for them",
+			"Right_Choise": "Religion is more important than progress",
+
+			"Image": 5,
+
+			"L_Effect_Monny": 15,
+			"L_Effect_Military": 0,
+			"L_Effect_Religen": 0,
+			"L_Effect_People": -20,
+
+			"R_Effect_Monny": -10,
+			"R_Effect_Military": 0,
+			"R_Effect_Religen": 5,
+			"R_Effect_People": 20
+		}
+	],
+
+	"EndCards":
+	[
+		{
+			"name": "Game Over",
+			"Main_text": "Your incompetence caused a military coup, you are now under arrest",
+			"Left_Choise": "Try Again",
+			"Right_Choise": "Back to Menu",
+
+			"Image": 11,
+
+			"L_Effect_Monny": 0,
+			"L_Effect_Military": 0,
+			"L_Effect_Religen": 0,
+			"L_Effect_People": 0,
+
+			"R_Effect_Monny": 0,
+			"R_Effect_Military": 0,
+			"R_Effect_Religen": 0,
+			"R_Effect_People": 0
+		},
+
+		{
+			"name": "Game Over",
+			"Main_text": "Religious fanatics took over the country, you lost.",
+			"Left_Choise": "Try Again",
+			"Right_Choise": "Back to Menu",
+
+			"Image": 10,
+
+			"L_Effect_Monny": 0,
+			"L_Effect_Military": 0,
+			"L_Effect_Religen": 0,
+			"L_Effect_People": 0,
+
+			"R_Effect_Monny": 0,
+			"R_Effect_Military": 0,
+			"R_Effect_Religen": 0,
+			"R_Effect_People": 0
+		},
+
+		
+		{
+			"name": "Game Over",
+			"Main_text": "The people are angery, you had to escape the country.",
+			"Left_Choise": "Try Again",
+			"Right_Choise": "Back to Menu",
+
+			"Image": 9,
+
+			"L_Effect_Monny": 0,
+			"L_Effect_Military": 0,
+			"L_Effect_Religen": 0,
+			"L_Effect_People": 0,
+
+			"R_Effect_Monny": 0,
+			"R_Effect_Military": 0,
+			"R_Effect_Religen": 0,
+			"R_Effect_People": 0
+		}
+	]
+}
