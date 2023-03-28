@@ -1040,7 +1040,23 @@ MonoBehaviour:
   ArmyEndingCard: {fileID: 631174668}
   Indicator_Small_Scale: 13
   Indicator_large_Scale: 40
-  Cards: []
+  Card_Data: {fileID: 4900000, guid: 5510a2a70cf39a345aeb1dcd899ce725, type: 3}
+  Card_Set:
+    Cards: []
+    EndCards: []
+  images:
+  - {fileID: 2800000, guid: 176bbbe228d88744caac05f7c5bd42b2, type: 3}
+  - {fileID: 2800000, guid: e66e529f7344f1d45862d58e8b136e07, type: 3}
+  - {fileID: 2800000, guid: fb5a66b7f0340d14abd165bdb27c1b99, type: 3}
+  - {fileID: 2800000, guid: 57f3a61ea3339d74db20c4fc5439beff, type: 3}
+  - {fileID: 2800000, guid: ce7466f8d3f952f4a83f8612ecf7ca2d, type: 3}
+  - {fileID: 2800000, guid: f0d37d6cd2b530a4ea46ccc02537edbd, type: 3}
+  - {fileID: 2800000, guid: 023dd3cd847118744a89459542584add, type: 3}
+  - {fileID: 2800000, guid: d03df22e0c32e454ca7e65831f9e04e2, type: 3}
+  - {fileID: 2800000, guid: 83bcf3460efa43b469ec7cc4867127d3, type: 3}
+  - {fileID: 2800000, guid: 63b203c5caedd1047ad26fd3085b3c75, type: 3}
+  - {fileID: 2800000, guid: 1a74bd810782fca45a5d7ffa42fbc928, type: 3}
+  - {fileID: 2800000, guid: d8d6fa24abec7ca4c915d676ef7f782a, type: 3}
 --- !u!4 &264779832
 Transform:
   m_ObjectHideFlags: 0
@@ -1852,7 +1868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &566181735
 Transform:
   m_ObjectHideFlags: 0
@@ -5654,6 +5670,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 566181735}
     m_Modifications:
+    - target: {fileID: 5799365897196769058, guid: 2b1d6c2fb3b29fd408e519a1052ca174, type: 3}
+      propertyPath: Charicter_Name
+      value: Alon Boy
+      objectReference: {fileID: 0}
     - target: {fileID: 5799365897196769059, guid: 2b1d6c2fb3b29fd408e519a1052ca174, type: 3}
       propertyPath: m_Name
       value: Orthodox_Card

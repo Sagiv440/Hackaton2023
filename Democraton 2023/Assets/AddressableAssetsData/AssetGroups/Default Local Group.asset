@@ -16,7 +16,11 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 40427c305dbb20e428881bbe61904181
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 023dd3cd847118744a89459542584add
+    m_Address: Assets/Sprites/Card_Slices/Card_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e889c87552990ca468a78fd158adbbab, type: 2}
   m_SchemaSet:
